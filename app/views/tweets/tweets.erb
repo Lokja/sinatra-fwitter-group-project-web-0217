@@ -1,0 +1,7 @@
+All da tweets
+
+<%= "Welcome, #{current_user.username}." %>
+
+<% Tweet.all.each do |tweet| %>
+  <%= "#{tweet.content} - #{User.find(tweet.user_id).username}" %>
+<% end %>

@@ -1,0 +1,8 @@
+"<%= @tweet.content %>"<br>
+-- <%= User.find(@tweet.user_id).username %>
+<br>
+<form action="/tweets/<%= @tweet.id %>/delete" method="post">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Tweet">
+</form>
+<a href="/tweets/<%= @tweet.id %>/edit">Edit Tweet</a>
